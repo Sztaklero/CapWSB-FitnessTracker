@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.Date;
+
 @Entity
 @Table(name = "trainings")
 @Getter
@@ -47,6 +48,23 @@ public class Training {
             final ActivityType activityType,
             final double distance,
             final double averageSpeed) {
+        this.user = user;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.activityType = activityType;
+        this.distance = distance;
+        this.averageSpeed = averageSpeed;
+    }
+
+    public Training(
+            final Long id,
+            final User user,
+            final Date startTime,
+            final Date endTime,
+            final ActivityType activityType,
+            final double distance,
+            final double averageSpeed) {
+        this.id = id;
         this.user = user;
         this.startTime = startTime;
         this.endTime = endTime;
